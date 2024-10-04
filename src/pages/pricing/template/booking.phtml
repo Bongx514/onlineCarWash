@@ -1,0 +1,68 @@
+<link rel="stylesheet" href="../web/css/_booking.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+    <h1 class="text-3xl font-bold text-center text-gray-900 mb-8">Book Your Car Wash</h1>
+    <div class="block-booking grid grid-cols-1 md:grid-cols-4 gap-8">
+        <form action="/payment" method="POST" class="bg-white rounded-lg shadow-md p-6 md:col-span-3">
+            <div class="mb-4">
+                <label for="name" class="block text-sm font-medium text-gray-700">Full Name</label>
+                <input type="text" id="name" name="name" required class="mt-1 block w-full border border-gray-300 rounded-md p-2 focus:ring-blue-500 focus:border-blue-500" placeholder="Your Name">
+            </div>
+
+            <div class="mb-4">
+                <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
+                <input type="email" id="email" name="email" required class="mt-1 block w-full border border-gray-300 rounded-md p-2 focus:ring-blue-500 focus:border-blue-500" placeholder="you@example.com">
+            </div>
+
+            <div class="mb-4">
+                <label for="phone" class="block text-sm font-medium text-gray-700">Phone Number</label>
+                <input type="tel" id="phone" name="phone" required class="mt-1 block w-full border border-gray-300 rounded-md p-2 focus:ring-blue-500 focus:border-blue-500" placeholder="Your Phone Number">
+            </div>
+
+            <div class="mb-4">
+                <label for="regNumber" class="block text-sm font-medium text-gray-700">Vehicle Reg. No:</label>
+                <input type="Text" id="regNumber" name="regNumber" required class="mt-1 block w-full border border-gray-300 rounded-md p-2 focus:ring-blue-500 focus:border-blue-500" placeholder="Vehicle Registration Number">
+            </div>
+
+            <div class="mb-4">
+                <label for="service" class="block text-sm font-medium text-gray-700">Select Service</label>
+                <select id="service" name="service" required class="mt-1 block w-full border border-gray-300 rounded-md p-2 focus:ring-blue-500 focus:border-blue-500">
+                    <option value="basic" data-price="60">Basic Wash - R60.00</option>
+                    <option value="wash_and_polish" data-price="130">Wash and Body Polish - R130.00</option>
+                    <option value="super_wash" data-price="250">Super Wash - R250.00</option>
+                </select>
+            </div>
+
+            <div class="mb-4">
+                <label for="car_type" class="block text-sm font-medium text-gray-700">Car Type</label>
+                <select id="car_type" name="car_type" required class="mt-1 block w-full border border-gray-300 rounded-md p-2 focus:ring-blue-500 focus:border-blue-500">
+                    <option value="small_cars" data-extra="10">Sedan/Hatchback + R10.00</option>
+                    <option value="larger_cars" data-extra="20">SUV/Minibus + R20.00</option>
+                </select>
+            </div>
+
+            <div class="mb-4">
+                <label for="location" class="block text-sm font-medium text-gray-700">Location of Service</label>
+                <select id="location" name="location" required class="mt-1 block w-full border border-gray-300 rounded-md p-2 focus:ring-blue-500 focus:border-blue-500">
+                    <option value="house_call" data-extra="30">House Call + R30.00</option>
+                    <option value="on_site" data-extra="0">At the Car Wash - R0.00</option>
+                </select>
+            </div>
+
+            <div class="mb-4">
+                <label for="date" class="block text-sm font-medium text-gray-700">Select Date</label>
+                <input type="date" id="date" name="date" required class="mt-1 block w-full border border-gray-300 rounded-md p-2 focus:ring-blue-500 focus:border-blue-500">
+            </div>
+
+            <div class="mb-6">
+                <label for="time" class="block text-sm font-medium text-gray-700">Select Time</label>
+                <input type="time" id="time" name="time" required class="mt-1 block w-full border border-gray-300 rounded-md p-2 focus:ring-blue-500 focus:border-blue-500">
+            </div>
+        </form>
+
+        <?php include("../../../components/cart-summary.html")?>
+    </div>
+</div>
+
+<script src="../web/js/booking-totals.js"></script>

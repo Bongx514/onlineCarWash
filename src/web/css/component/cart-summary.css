@@ -1,0 +1,10 @@
+.block-cart-summary {
+    width: 30%;
+    height: 50%;
+ }
+
+ @media (max-width: 767px) {
+    .block-cart-summary{
+        width: 100%;
+    }
+  }

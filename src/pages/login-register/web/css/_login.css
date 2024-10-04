@@ -1,0 +1,32 @@
+.login {
+   height: 80vh;
+}
+.body-login {
+    max-width: 25%;
+    position: relative;
+    top: 140px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    padding: 45px 20px;
+}
+
+a[href="./pages/login-register/layout/login.php"] {
+   display: none;
+}
+
+@media (max-width: 599px) {
+   .login {
+      height: 95vh;
+   }
+
+   .body-login {
+    top: 60px;
+    max-width: 70%;
+   }
+}
+
+@media (max-width: 767px) {
+   .body-login{
+    top: 100px;
+   }
+}

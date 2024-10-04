@@ -1,0 +1,22 @@
+.block-booking {
+   display: flex;
+}
+
+.block-booking form {
+   width: 68%;
+}
+
+@media (max-width: 599px) {
+   .block-booking{
+      display: block;
+  }
+  
+   .block-booking form {
+      width: 100%;
+      margin-bottom: 18px;
+   }
+}
+
+@media (max-width: 767px) {
+  
+}

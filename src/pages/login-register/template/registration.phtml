@@ -1,0 +1,51 @@
+<link rel="stylesheet" href="../web/css/_login.css">
+
+<div class="register">
+    <div class="body-register bg-white shadow-md rounded-lg p-10 max-w-md w-full">
+        <h2 class="text-2xl font-bold text-center mb-8">Create Your Account</h2>
+        
+        <form action="/register" method="POST">
+            <!-- Full Name Field -->
+            <div class="mb-8">
+                <label for="name" class="block text-sm font-medium text-gray-700">Full Name</label>
+                <input type="text" id="name" name="name" required 
+                    class="mt-1 block w-full border border-gray-300 rounded-md p-3 focus:ring-blue-500 focus:border-blue-500" 
+                    placeholder="Your Full Name">
+            </div>
+
+            <!-- Email Field -->
+            <div class="mb-8">
+                <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
+                <input type="email" id="email" name="email" required 
+                    class="mt-1 block w-full border border-gray-300 rounded-md p-3 focus:ring-blue-500 focus:border-blue-500" 
+                    placeholder="you@example.com">
+            </div>
+
+            <!-- Password Field -->
+            <div class="mb-8">
+                <label for="password" class="block text-sm font-medium text-gray-700">Password</label>
+                <input type="password" id="password" name="password" required 
+                    class="mt-1 block w-full border border-gray-300 rounded-md p-3 focus:ring-blue-500 focus:border-blue-500" 
+                    placeholder="Your password">
+            </div>
+
+            <!-- Confirm Password Field -->
+            <div class="mb-8">
+                <label for="confirm_password" class="block text-sm font-medium text-gray-700">Confirm Password</label>
+                <input type="password" id="confirm_password" name="confirm_password" required 
+                    class="mt-1 block w-full border border-gray-300 rounded-md p-3 focus:ring-blue-500 focus:border-blue-500" 
+                    placeholder="Confirm your password">
+            </div>
+
+            <!-- Register Button -->
+            <button type="submit" class="w-full bg-blue-600 text-white font-bold py-3 rounded-md hover:bg-blue-700 transition duration-300">
+                Register
+            </button>
+
+            <!-- Login Redirect -->
+            <p class="mt-6 text-center text-sm text-gray-600">
+                Already have an account? <a href="/login" class="text-blue-600 hover:underline">Login here</a>
+            </p>
+        </form>
+    </div>
+</div>
